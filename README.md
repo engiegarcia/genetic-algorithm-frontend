@@ -73,7 +73,14 @@ fuera de rango se muestra como error y desactiva «Ejecutar»; nunca se recorta 
 
 ## Despliegue
 
-Vercel: importar el repositorio y definir `NEXT_PUBLIC_API_URL` con la URL del backend en Render.
+1. Desplegar primero el backend en Render y anotar su URL (`https://<servicio>.onrender.com`).
+2. En Vercel, importar este repositorio. `vercel.json` fija la instalación y el build con
+   pnpm 11.5.2, así que no hace falta cambiar la configuración del proyecto.
+3. Definir la variable de entorno `NEXT_PUBLIC_API_URL` con la URL del backend, con `https://` y
+   sin barra final. El build falla con un mensaje claro si falta o si no usa https.
+4. En Render, poner la URL de Vercel en `CORS_ALLOWED_ORIGINS` del backend, por ejemplo
+   `["https://genetic-algorithm-frontend.vercel.app"]`.
+
 Si el backend está en un plan gratuito, la primera petición puede tardar mientras despierta; la
 interfaz lo indica.
 
