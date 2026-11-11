@@ -1,0 +1,396 @@
+{
+  "dias": ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"],
+  "bloques": { "base": [23, 8], "media": [8, 18], "punta": [18, 23] },
+  "cargos_ctm_kwh": { "punta": 69.24, "media": 52.32, "base": 52.4 },
+  "cargo_fijo_soles_mes": 4.43,
+  "limite_w": 5000,
+  "precios_kwh": [
+    0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232,
+    0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.6923999999999999, 0.6923999999999999,
+    0.6923999999999999, 0.6923999999999999, 0.6923999999999999, 0.524, 0.524, 0.524, 0.524, 0.524,
+    0.524, 0.524, 0.524, 0.524, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232,
+    0.5232, 0.5232, 0.6923999999999999, 0.6923999999999999, 0.6923999999999999, 0.6923999999999999,
+    0.6923999999999999, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.5232,
+    0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.6923999999999999,
+    0.6923999999999999, 0.6923999999999999, 0.6923999999999999, 0.6923999999999999, 0.524, 0.524,
+    0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232,
+    0.5232, 0.5232, 0.5232, 0.5232, 0.6923999999999999, 0.6923999999999999, 0.6923999999999999,
+    0.6923999999999999, 0.6923999999999999, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524,
+    0.524, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232,
+    0.6923999999999999, 0.6923999999999999, 0.6923999999999999, 0.6923999999999999,
+    0.6923999999999999, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.5232,
+    0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.6923999999999999,
+    0.6923999999999999, 0.6923999999999999, 0.6923999999999999, 0.6923999999999999, 0.524, 0.524,
+    0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.524, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232, 0.5232,
+    0.5232, 0.5232, 0.5232, 0.5232, 0.6923999999999999, 0.6923999999999999, 0.6923999999999999,
+    0.6923999999999999, 0.6923999999999999, 0.524
+  ],
+  "perfil_fijo": [
+    0.0, 0.0, 0.0, 350.0, 0.0, 1000.0, 4500.0, 3000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 350.0,
+    0.0, 0.0, 200.0, 4700.0, 1475.0, 175.0, 350.0, 0.0, 0.0, 0.0, 0.0, 350.0, 0.0, 1000.0, 4500.0,
+    1500.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 350.0, 0.0, 0.0, 200.0, 4700.0, 1475.0, 175.0, 350.0,
+    0.0, 0.0, 0.0, 0.0, 350.0, 0.0, 1000.0, 4500.0, 3000.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    350.0, 0.0, 0.0, 200.0, 4700.0, 1475.0, 175.0, 350.0, 0.0, 0.0, 0.0, 0.0, 350.0, 0.0, 1000.0,
+    4500.0, 1500.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 350.0, 0.0, 0.0, 200.0, 4700.0, 1475.0,
+    175.0, 350.0, 0.0, 0.0, 0.0, 0.0, 350.0, 0.0, 1000.0, 4500.0, 3000.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    0.0, 0.0, 350.0, 0.0, 0.0, 200.0, 4700.0, 1475.0, 175.0, 350.0, 0.0, 0.0, 0.0, 0.0, 350.0, 0.0,
+    0.0, 0.0, 0.0, 1500.0, 0.0, 300.0, 1300.0, 4500.0, 0.0, 0.0, 350.0, 200.0, 0.0, 0.0, 4500.0,
+    1495.0, 235.0, 390.0, 0.0, 0.0, 0.0, 0.0, 350.0, 0.0, 0.0, 0.0, 0.0, 1500.0, 30.0, 230.0,
+    1200.0, 4500.0, 0.0, 0.0, 430.0, 280.0, 0.0, 0.0, 4500.0, 1475.0, 215.0, 390.0, 0.0
+  ],
+  "artefactos": [
+    {
+      "nombre": "Refrigeradora",
+      "potencia_w": 350,
+      "horas": 2,
+      "frecuencia": "dia",
+      "horas_semana": 14,
+      "desplazable": false
+    },
+    {
+      "nombre": "Cocina eléctrica",
+      "potencia_w": 4500,
+      "horas": 2,
+      "frecuencia": "dia",
+      "horas_semana": 14,
+      "desplazable": false
+    },
+    {
+      "nombre": "Licuadora",
+      "potencia_w": 300,
+      "horas": 3,
+      "frecuencia": "semana",
+      "horas_semana": 3,
+      "desplazable": false
+    },
+    {
+      "nombre": "Batidora",
+      "potencia_w": 200,
+      "horas": 2,
+      "frecuencia": "semana",
+      "horas_semana": 2,
+      "desplazable": false
+    },
+    {
+      "nombre": "Olla arrocera",
+      "potencia_w": 1000,
+      "horas": 1,
+      "frecuencia": "dia",
+      "horas_semana": 7,
+      "desplazable": false
+    },
+    {
+      "nombre": "Waflera",
+      "potencia_w": 700,
+      "horas": 1,
+      "frecuencia": "dia",
+      "horas_semana": 7,
+      "desplazable": false
+    },
+    {
+      "nombre": "Cafetera",
+      "potencia_w": 800,
+      "horas": 1,
+      "frecuencia": "dia",
+      "horas_semana": 7,
+      "desplazable": false
+    },
+    {
+      "nombre": "Horno microondas",
+      "potencia_w": 1300,
+      "horas": 1,
+      "frecuencia": "dia",
+      "horas_semana": 7,
+      "desplazable": false
+    },
+    {
+      "nombre": "Televisor 29\" (dormitorio 1)",
+      "potencia_w": 175,
+      "horas": 1,
+      "frecuencia": "dia",
+      "horas_semana": 7,
+      "desplazable": false
+    },
+    {
+      "nombre": "DVD (dormitorio 1)",
+      "potencia_w": 20,
+      "horas": 4,
+      "frecuencia": "semana",
+      "horas_semana": 4,
+      "desplazable": false
+    },
+    {
+      "nombre": "Televisor 29\" (dormitorio 2)",
+      "potencia_w": 175,
+      "horas": 1,
+      "frecuencia": "dia",
+      "horas_semana": 7,
+      "desplazable": false
+    },
+    {
+      "nombre": "DVD (dormitorio 2)",
+      "potencia_w": 20,
+      "horas": 4,
+      "frecuencia": "semana",
+      "horas_semana": 4,
+      "desplazable": false
+    },
+    {
+      "nombre": "Computadora",
+      "potencia_w": 200,
+      "horas": 2,
+      "frecuencia": "dia",
+      "horas_semana": 14,
+      "desplazable": false
+    },
+    {
+      "nombre": "Impresora",
+      "potencia_w": 100,
+      "horas": 2,
+      "frecuencia": "semana",
+      "horas_semana": 2,
+      "desplazable": false
+    },
+    {
+      "nombre": "Radiograbadora",
+      "potencia_w": 30,
+      "horas": 2,
+      "frecuencia": "semana",
+      "horas_semana": 2,
+      "desplazable": false
+    },
+    {
+      "nombre": "Lavadora",
+      "potencia_w": 500,
+      "horas": 3,
+      "frecuencia": "semana",
+      "horas_semana": 3,
+      "desplazable": true
+    },
+    {
+      "nombre": "TV de 29\" (sala)",
+      "potencia_w": 175,
+      "horas": 2,
+      "frecuencia": "dia",
+      "horas_semana": 14,
+      "desplazable": false
+    },
+    {
+      "nombre": "DVD (sala)",
+      "potencia_w": 20,
+      "horas": 2,
+      "frecuencia": "semana",
+      "horas_semana": 2,
+      "desplazable": false
+    },
+    {
+      "nombre": "Equipo de sonido",
+      "potencia_w": 80,
+      "horas": 2,
+      "frecuencia": "semana",
+      "horas_semana": 2,
+      "desplazable": false
+    },
+    {
+      "nombre": "Plancha eléctrica",
+      "potencia_w": 1000,
+      "horas": 3,
+      "frecuencia": "semana",
+      "horas_semana": 3,
+      "desplazable": true
+    },
+    {
+      "nombre": "Secadora de cabello",
+      "potencia_w": 1200,
+      "horas": 3,
+      "frecuencia": "semana",
+      "horas_semana": 3,
+      "desplazable": false
+    },
+    {
+      "nombre": "Aspiradora",
+      "potencia_w": 600,
+      "horas": 2,
+      "frecuencia": "semana",
+      "horas_semana": 2,
+      "desplazable": true
+    },
+    {
+      "nombre": "Lustradora",
+      "potencia_w": 300,
+      "horas": 2,
+      "frecuencia": "semana",
+      "horas_semana": 2,
+      "desplazable": true
+    },
+    {
+      "nombre": "Terma eléctrica",
+      "potencia_w": 1500,
+      "horas": 1,
+      "frecuencia": "dia",
+      "horas_semana": 7,
+      "desplazable": true
+    }
+  ],
+  "tareas": [
+    {
+      "indice": 0,
+      "artefacto": "Terma eléctrica",
+      "sesion": 1,
+      "potencia_w": 1500,
+      "duracion": 1,
+      "inicios": [4, 5, 6, 7, 18, 19, 20, 21, 22],
+      "habitual": 18
+    },
+    {
+      "indice": 1,
+      "artefacto": "Terma eléctrica",
+      "sesion": 2,
+      "potencia_w": 1500,
+      "duracion": 1,
+      "inicios": [28, 29, 30, 31, 42, 43, 44, 45, 46],
+      "habitual": 42
+    },
+    {
+      "indice": 2,
+      "artefacto": "Terma eléctrica",
+      "sesion": 3,
+      "potencia_w": 1500,
+      "duracion": 1,
+      "inicios": [52, 53, 54, 55, 66, 67, 68, 69, 70],
+      "habitual": 66
+    },
+    {
+      "indice": 3,
+      "artefacto": "Terma eléctrica",
+      "sesion": 4,
+      "potencia_w": 1500,
+      "duracion": 1,
+      "inicios": [76, 77, 78, 79, 90, 91, 92, 93, 94],
+      "habitual": 90
+    },
+    {
+      "indice": 4,
+      "artefacto": "Terma eléctrica",
+      "sesion": 5,
+      "potencia_w": 1500,
+      "duracion": 1,
+      "inicios": [100, 101, 102, 103, 114, 115, 116, 117, 118],
+      "habitual": 114
+    },
+    {
+      "indice": 5,
+      "artefacto": "Terma eléctrica",
+      "sesion": 6,
+      "potencia_w": 1500,
+      "duracion": 1,
+      "inicios": [125, 126, 127, 128, 129, 130, 138, 139, 140, 141, 142],
+      "habitual": 138
+    },
+    {
+      "indice": 6,
+      "artefacto": "Terma eléctrica",
+      "sesion": 7,
+      "potencia_w": 1500,
+      "duracion": 1,
+      "inicios": [149, 150, 151, 152, 153, 154, 162, 163, 164, 165, 166],
+      "habitual": 162
+    },
+    {
+      "indice": 7,
+      "artefacto": "Lavadora",
+      "sesion": 1,
+      "potencia_w": 500,
+      "duracion": 3,
+      "inicios": [
+        18, 19, 20, 42, 43, 44, 66, 67, 68, 90, 91, 92, 114, 115, 116, 128, 129, 130, 131, 132, 133,
+        134, 135, 136, 137, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161
+      ],
+      "habitual": 68
+    },
+    {
+      "indice": 8,
+      "artefacto": "Plancha eléctrica",
+      "sesion": 1,
+      "potencia_w": 1000,
+      "duracion": 1,
+      "inicios": [
+        18, 19, 20, 21, 22, 42, 43, 44, 45, 46, 66, 67, 68, 69, 70, 90, 91, 92, 93, 94, 114, 115,
+        116, 117, 118, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 152,
+        153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165
+      ],
+      "habitual": 21
+    },
+    {
+      "indice": 9,
+      "artefacto": "Plancha eléctrica",
+      "sesion": 2,
+      "potencia_w": 1000,
+      "duracion": 1,
+      "inicios": [
+        18, 19, 20, 21, 22, 42, 43, 44, 45, 46, 66, 67, 68, 69, 70, 90, 91, 92, 93, 94, 114, 115,
+        116, 117, 118, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 152,
+        153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165
+      ],
+      "habitual": 69
+    },
+    {
+      "indice": 10,
+      "artefacto": "Plancha eléctrica",
+      "sesion": 3,
+      "potencia_w": 1000,
+      "duracion": 1,
+      "inicios": [
+        18, 19, 20, 21, 22, 42, 43, 44, 45, 46, 66, 67, 68, 69, 70, 90, 91, 92, 93, 94, 114, 115,
+        116, 117, 118, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 152,
+        153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165
+      ],
+      "habitual": 117
+    },
+    {
+      "indice": 11,
+      "artefacto": "Aspiradora",
+      "sesion": 1,
+      "potencia_w": 600,
+      "duracion": 2,
+      "inicios": [
+        18, 19, 42, 43, 66, 67, 90, 91, 114, 115, 129, 130, 131, 132, 133, 134, 135, 136, 137, 153,
+        154, 155, 156, 157, 158, 159, 160, 161
+      ],
+      "habitual": 130
+    },
+    {
+      "indice": 12,
+      "artefacto": "Lustradora",
+      "sesion": 1,
+      "potencia_w": 300,
+      "duracion": 2,
+      "inicios": [
+        18, 19, 42, 43, 66, 67, 90, 91, 114, 115, 129, 130, 131, 132, 133, 134, 135, 136, 137, 153,
+        154, 155, 156, 157, 158, 159, 160, 161
+      ],
+      "habitual": 135
+    }
+  ],
+  "habitual": {
+    "costo": 75.79126399999998,
+    "padr": 6.341150016061677,
+    "pico_w": 4700.0,
+    "energia_punta_kwh": 62.7,
+    "violacion_kwh": 0.0,
+    "objetivo": 1.0,
+    "factible": true
+  },
+  "habitual_cromosoma": [4, 4, 4, 4, 4, 6, 6, 8, 3, 13, 23, 11, 16],
+  "cota_costo": 73.25926400000003,
+  "padr_minimo": 6.341150016061677,
+  "objetivo_minimo": 0.9832962279135498,
+  "espacio_busqueda": "2.919e+16",
+  "fuentes": {
+    "artefactos": "MINEM (2020), Guía de orientación del uso eficiente de la energía, Tabla 35, pp. 88-89",
+    "tarifa": "Osinergmin, pliego tarifario de Pluz Energía Perú, sistema Lima Norte, vigente desde el 4 de noviembre de 2026, opción BT5-I residencial con consumo mayor a 140 kWh/mes",
+    "bloques": "Osinergmin (2013), Res. 206-2013-OS/CD, y (2023), Res. 116-2023-OS/CD, numeral 4.9",
+    "limite": "MINEM (2006), Código Nacional de Electricidad - Utilización, Regla 050-110",
+    "franjas_y_horarios": "Supuesto del caso de estudio (definición operacional)"
+  }
+}

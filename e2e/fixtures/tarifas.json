@@ -1,0 +1,24 @@
+{
+  "cromosoma": [4, 4, 4, 4, 4, 6, 6, 8, 3, 13, 23, 11, 16],
+  "energia_semanal_kwh": 124.52,
+  "bt5i": {
+    "opcion": "BT5-I",
+    "cargos_ctm_kwh": { "punta": 69.24, "media": 52.32, "base": 52.4 },
+    "energia_semanal_soles": 75.79126399999998,
+    "energia_mensual_soles": 324.8197028571428,
+    "cargo_fijo_mensual_soles": 4.43,
+    "total_mensual_soles": 329.2497028571428
+  },
+  "bt5b": {
+    "opcion": "BT5B",
+    "cargos_ctm_kwh": { "unico": 64.57 },
+    "energia_semanal_soles": 80.402564,
+    "energia_mensual_soles": 344.58241714285714,
+    "cargo_fijo_mensual_soles": 2.18,
+    "total_mensual_soles": 346.76241714285715
+  },
+  "diferencia_mensual_soles": 17.512714285714367,
+  "ahorro_bt5i_pct": 5.050349582290396,
+  "nota": "Mes de 30 días; solo cargos por energía y cargo fijo del pliego, sin IGV ni otros conceptos del recibo.",
+  "fuente": "Osinergmin, pliego tarifario de Pluz Energía Perú, sistema Lima Norte, vigente desde el 4 de noviembre de 2026, opciones BT5-I y BT5B residencial con consumo mayor a 140 kWh/mes"
+}

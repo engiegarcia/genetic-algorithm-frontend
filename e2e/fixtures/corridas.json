@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nombre": "Corrida 1: configuración base",
+    "descripcion": "Cruce uniforme, mutación uniforme, torneo de tamaño 3 con elitismo y población aleatoria.",
+    "cambio": "Ninguno (referencia)",
+    "config": {
+      "peso_costo": 0.5,
+      "cruce": "uniforme",
+      "seleccion": "torneo",
+      "tamano_torneo": 3,
+      "inicializacion": "aleatoria",
+      "fraccion_siembra": 0.1,
+      "poblacion": 150,
+      "generaciones": 500,
+      "pc": 0.8,
+      "pm": 0.1,
+      "elitismo": 1,
+      "semilla": 2026,
+      "paciencia": null,
+      "parar_en_optimo": false
+    }
+  },
+  {
+    "id": 2,
+    "nombre": "Corrida 2: cruce de un punto",
+    "descripcion": "Igual a la base, pero con cruce de un punto.",
+    "cambio": "Cruce: uniforme → un punto",
+    "config": {
+      "peso_costo": 0.5,
+      "cruce": "un_punto",
+      "seleccion": "torneo",
+      "tamano_torneo": 3,
+      "inicializacion": "aleatoria",
+      "fraccion_siembra": 0.1,
+      "poblacion": 150,
+      "generaciones": 500,
+      "pc": 0.8,
+      "pm": 0.1,
+      "elitismo": 1,
+      "semilla": 2026,
+      "paciencia": null,
+      "parar_en_optimo": false
+    }
+  },
+  {
+    "id": 3,
+    "nombre": "Corrida 3: selección por ruleta",
+    "descripcion": "Igual a la base, pero con selección proporcional por ruleta (aptitud de Deb).",
+    "cambio": "Selección: torneo → ruleta",
+    "config": {
+      "peso_costo": 0.5,
+      "cruce": "uniforme",
+      "seleccion": "ruleta",
+      "tamano_torneo": 3,
+      "inicializacion": "aleatoria",
+      "fraccion_siembra": 0.1,
+      "poblacion": 150,
+      "generaciones": 500,
+      "pc": 0.8,
+      "pm": 0.1,
+      "elitismo": 1,
+      "semilla": 2026,
+      "paciencia": null,
+      "parar_en_optimo": false
+    }
+  },
+  {
+    "id": 4,
+    "nombre": "Corrida 4: inicialización voraz",
+    "descripcion": "Igual a la base, pero el 10 % de la población inicial se construye con la heurística voraz (cada uso en su hora más barata).",
+    "cambio": "Población inicial: aleatoria → 10 % voraz",
+    "config": {
+      "peso_costo": 0.5,
+      "cruce": "uniforme",
+      "seleccion": "torneo",
+      "tamano_torneo": 3,
+      "inicializacion": "voraz",
+      "fraccion_siembra": 0.1,
+      "poblacion": 150,
+      "generaciones": 500,
+      "pc": 0.8,
+      "pm": 0.1,
+      "elitismo": 1,
+      "semilla": 2026,
+      "paciencia": null,
+      "parar_en_optimo": false
+    }
+  }
+]
