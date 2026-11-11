@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Tokens de color como tripletes "R G B" para soportar opacidad (bg-surface/60).
+ * Los valores salen del brief de identidad; el contraste AA está verificado en el README.
+ * Los gráficos de recharts leen estas mismas variables: cambian de tema sin lógica en JS.
+ */
+@layer base {
+  :root {
+    --canvas: 243 247 250;
+    --surface: 250 252 253;
+    --surface-raised: 255 255 255;
+    --surface-sunken: 231 238 243;
+    --border: 210 221 230;
+    --border-strong: 167 186 202;
+    --ink: 16 34 47;
+    --ink-muted: 64 88 106;
+    --ink-faint: 88 110 127;
+    --accent: 27 73 101;
+    --accent-hover: 20 58 82;
+    --accent-tint: 202 233 255;
+    --on-accent: 255 255 255;
+    --danger: 180 35 24;
+    --warning: 138 90 0;
+    --success: 23 117 74;
+    --nivel-1: 190 233 232;
+    --nivel-2: 98 182 203;
+    --nivel-3: 179 143 36;
+    --nivel-4: 178 86 29;
+    --nivel-5: 126 42 39;
+    --curva-1: 43 123 185;
+    --curva-2: 176 58 125;
+    --curva-3: 63 138 79;
+    --curva-4: 107 79 176;
+    --curva-5: 85 105 122;
+  }
+
+  .dark {
+    --canvas: 11 22 32;
+    --surface: 16 32 48;
+    --surface-raised: 21 42 59;
+    --surface-sunken: 8 17 26;
+    --border: 31 53 71;
+    --border-strong: 53 83 107;
+    --ink: 230 241 248;
+    --ink-muted: 166 191 207;
+    --ink-faint: 138 163 181;
+    --accent: 95 168 211;
+    --accent-hover: 125 187 224;
+    --accent-tint: 27 73 101;
+    --on-accent: 11 22 32;
+    --danger: 242 139 130;
+    --warning: 227 179 65;
+    --success: 95 196 138;
+    --nivel-1: 39 89 106;
+    --nivel-2: 47 116 135;
+    --nivel-3: 138 122 46;
+    --nivel-4: 201 115 47;
+    --nivel-5: 240 138 117;
+    --curva-1: 111 177 230;
+    --curva-2: 224 125 180;
+    --curva-3: 120 197 138;
+    --curva-4: 167 148 232;
+    --curva-5: 169 185 198;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    /* h-dvh con fallback: evita el salto de la barra del navegador móvil. */
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: rgb(var(--canvas));
+    color: rgb(var(--ink));
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Foco: anillo de 2 px en el acento con desplazamiento de 2 px. Nunca se elimina. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: rgb(var(--accent-tint));
+  }
+}
+
+@layer components {
+  /* Compatibilidad con los valores existentes: todos usan la tipografía general. */
+  .num {
+    font-family: inherit;
+  }
+
+  /* Etiquetas en mayúsculas pequeñas: la jerarquía va por rol, no por tamaño. */
+  .etiqueta {
+    @apply text-xs font-medium uppercase tracking-wide text-ink-muted;
+  }
+
+  /* Barra de desplazamiento sobria dentro de los paneles. */
+  .scroll-panel {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--border-strong)) transparent;
+  }
+}
+
+/*
+ * Slider propio sobre <input type="range">: conserva teclado y semántica nativos.
+ * La parte llena de la pista se pinta con --pct (porcentaje inline).
+ * El thumb tiene 40 px de área de toque (borde transparente) y 20 px visibles.
+ */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+.slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--accent)) var(--pct, 0%),
+    rgb(var(--surface-sunken)) var(--pct, 0%)
+  );
+  box-shadow: inset 0 0 0 1px rgb(var(--border));
+}
+.slider::-moz-range-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--accent)) var(--pct, 0%),
+    rgb(var(--surface-sunken)) var(--pct, 0%)
+  );
+  box-shadow: inset 0 0 0 1px rgb(var(--border));
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  margin-top: -18px;
+  border: 10px solid transparent;
+  border-radius: 9999px;
+  background: rgb(var(--accent));
+  background-clip: padding-box;
+  box-shadow: 0 0 0 1px rgb(var(--surface-raised)) inset;
+}
+.slider::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 10px solid transparent;
+  border-radius: 9999px;
+  background: rgb(var(--accent));
+  background-clip: padding-box;
+}
+.slider:focus-visible {
+  outline: none;
+}
+.slider:focus-visible::-webkit-slider-thumb {
+  box-shadow:
+    0 0 0 2px rgb(var(--canvas)),
+    0 0 0 4px rgb(var(--accent));
+  border-radius: 9999px;
+}
+.slider:focus-visible::-moz-range-thumb {
+  box-shadow:
+    0 0 0 2px rgb(var(--canvas)),
+    0 0 0 4px rgb(var(--accent));
+}
+.slider:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Contenido que no debe provocar saltos al crecer dentro de un panel con scroll. */
+.sin-ancla {
+  overflow-anchor: none;
+}
+
+/* Escala solo con puntero fino: en táctil el hover queda "pegado". */
+@media (hover: hover) and (pointer: fine) {
+  .hover-escala:hover {
+    transform: scale(1.01);
+  }
+}
+
+/* Sin movimiento: se conservan los cambios de estado, sin transforms ni transiciones largas. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Barra de carga indeterminada (LinearProgress). Es de las pocas animaciones con easing lineal: es progreso. */
+@keyframes barra-indeterminada {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+.barra-indeterminada {
+  animation: barra-indeterminada 1.2s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .barra-indeterminada {
+    animation: none;
+    transform: none;
+    width: 100%;
+  }
+}
